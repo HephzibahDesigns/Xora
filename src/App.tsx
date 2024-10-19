@@ -1,3 +1,4 @@
+import Features from "./Sections/Features";
 import Header from "./Sections/Header";
 import Hero from "./Sections/Hero";
 
@@ -6,6 +7,7 @@ function App() {
     <main className="overflow-hidden">
       <Header />
       <Hero />
+      <Features />
     </main>
   );
 }

@@ -34,19 +34,21 @@ const Button: React.FC<ButtonProps> = ({
           {children}
         </span>
       </span>
+
+      <span className="glow-before glow-after" />
     </>
   );
 
   return href ? (
     <a
-      className={clsx("relative, p-0.5 gap-5 rounded-2xl shadow-500 group")}
+      className={clsx("relative p-0.5 gap-5 rounded-2xl shadow-500 group")}
       href={href}
     >
       <Inner />
     </a>
   ) : (
     <button
-      className={clsx("relative, p-0.5 gap-5 rounded-2xl shadow-500 group")}
+      className={clsx("relative p-0.5 gap-5 rounded-2xl shadow-500 group")}
     >
       <Inner />
     </button>

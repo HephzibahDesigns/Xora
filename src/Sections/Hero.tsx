@@ -1,10 +1,11 @@
 import { Element, Link } from "react-scroll";
 import Button from "../Components/Button";
 import Zap from "../assets/images/zap.svg";
+import HeroImage from "../assets/images/hero.png";
 
 const Hero = () => {
   return (
-    <section className="relative pt-60 pb-40 max-lg:pt-52 max-lg:pb-36 max-md:pt-36 max-md:pb-32 border-2 border-amber-500">
+    <section className="relative pt-60 pb-40 max-lg:pt-52 max-lg:pb-36 max-md:pt-36 max-md:pb-32 ">
       <Element name="hero">
         <div className="container">
           <div className="relative z-2 max-w-512 max-lg:max-w-388">
@@ -24,6 +25,14 @@ const Hero = () => {
                 Try Now
               </Button>
             </Link>
+          </div>
+
+          <div className="absolute -top-32 left-[calc(30%)] w-[1230px] pointer-events-none hero-img_res">
+            <img
+              src={HeroImage}
+              alt="hero"
+              className="size-1230 max-lg:h-auto"
+            />
           </div>
         </div>
       </Element>
