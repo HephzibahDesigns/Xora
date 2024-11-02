@@ -3,8 +3,11 @@ import { useState } from "react";
 import { Element } from "react-scroll";
 import outlines from "../assets/images/bg-outlines.svg";
 import outlineFill from "../assets/images/bg-outlines-fill.png";
+import checkImg from "../assets//images/check.png";
+import CountUp from "react-countup";
 
 import { plans } from "../constants";
+import Button from "../Components/Button";
 
 const Pricing = () => {
   const [monthly, setMonthly] = useState(false);
@@ -14,7 +17,7 @@ const Pricing = () => {
         <div className="container">
           <div className="max-w-960 pricing-head_before relative mx-auto border-l border-r border-s2 bg-s1/50 pb-40 pt-28 max-xl:max-w-4xl max-lg:border-none max-md:pb-32 max-md:pt-16">
             <h3 className="h3 max-lg:h4 max-md:h5 z-3 mx-auto mb-14 max-w-lg text-center text-p4 max-md:mb-11 max-sm:max-w-sm">
-              Flexible pricingfor teams of all sizes
+              Flexible pricing for teams of all sizes
             </h3>
 
             <div className="relative z-4 mx-auto flex w-[375px] rounded-3xl border-[3px] border-s4/25 bg-s1/50 p-2 backdrop-blur-[6px] max-md:w-[310px]">
@@ -86,7 +89,7 @@ const Pricing = () => {
                   <div
                     className={clsx(
                       "absolute left-0 right-0 z-2 flex items-center justify-center",
-                      index === 1 ? "-top-6" : "-top6 xl:-top-11"
+                      index === 1 ? "-top-6" : "-top-6 xl:-top-11"
                     )}
                   >
                     <img
@@ -113,8 +116,70 @@ const Pricing = () => {
                     >
                       {title}
                     </div>
-                    <div className=""></div>
+                    <div className="relative z-2 flex items-center justify-center">
+                      <div
+                        className={clsx(
+                          "h-num flex items-start",
+                          index === 1 ? "text-p3" : "text-p4"
+                        )}
+                      >
+                        ${" "}
+                        <CountUp
+                          start={priceMonthly}
+                          end={monthly ? priceMonthly : priceYearly}
+                          duration={0.4}
+                          useEasing={false}
+                          preserveValue
+                        />
+                      </div>
+
+                      <div className="small-1 relative top-3 ml-1 uppercase">
+                        / mo
+                      </div>
+                    </div>
                   </div>
+
+                  <div
+                    className={clsx(
+                      "body-1 relative z-2 mb-10 w-full border-b-s2 pb-9 text-center text-p4",
+                      index === 1 && "border-b"
+                    )}
+                  >
+                    {caption}
+                  </div>
+
+                  <ul className="mx-auto space-y-4 xl:px-7">
+                    {features.map((feature) => (
+                      <li
+                        key={feature}
+                        className="relative flex items-center gap-5"
+                      >
+                        <img
+                          src={checkImg}
+                          alt="check"
+                          className="object-contain size-10"
+                        />
+                        <p className="flex-1">{feature}</p>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="mt-10 flex w-full justify-center">
+                    <Button
+                      icon={icon}
+                      href=""
+                      onClick={() => ""}
+                      markerFill=""
+                    >
+                      Get Started
+                    </Button>
+                  </div>
+
+                  {index === 1 && (
+                    <p className="small-compact mt-9 text-center text-p3 before:mx-2.5  before:content-['-'] after:mx-2.5 after:content-['-']">
+                      Limited time offer
+                    </p>
+                  )}
                 </div>
               )
             )}
