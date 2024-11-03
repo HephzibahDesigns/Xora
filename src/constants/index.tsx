@@ -79,7 +79,7 @@ export const details = [
   },
 ];
 
-export const faq = [
+export const faqs = [
   {
     id: "0",
     question: "How easy is it to setup Xora?",

@@ -89,7 +89,7 @@ const Pricing = () => {
                   <div
                     className={clsx(
                       "absolute left-0 right-0 z-2 flex items-center justify-center",
-                      index === 1 ? "-top-6" : "-top-6 xl:-top-11"
+                      index === 1 ? "-top-6" : "-top-6gi xl:-top-11"
                     )}
                   >
                     <img
@@ -123,7 +123,7 @@ const Pricing = () => {
                           index === 1 ? "text-p3" : "text-p4"
                         )}
                       >
-                        ${" "}
+                        $
                         <CountUp
                           start={priceMonthly}
                           end={monthly ? priceMonthly : priceYearly}
@@ -176,7 +176,7 @@ const Pricing = () => {
                   </div>
 
                   {index === 1 && (
-                    <p className="small-compact mt-9 text-center text-p3 before:mx-2.5  before:content-['-'] after:mx-2.5 after:content-['-']">
+                    <p className="small-compact mt-9 text-center text-p3 before:mx-2.5 before:content-['-'] after:mx-2.5 after:content-['-']">
                       Limited time offer
                     </p>
                   )}
