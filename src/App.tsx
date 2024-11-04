@@ -3,6 +3,7 @@ import Features from "./Sections/Features";
 import Header from "./Sections/Header";
 import Hero from "./Sections/Hero";
 import Pricing from "./Sections/Pricing";
+import Testimonials from "./Sections/Testimonials";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Features />
       <Pricing />
       <Faq />
+      <Testimonials />
     </main>
   );
 }

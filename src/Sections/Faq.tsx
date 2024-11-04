@@ -31,7 +31,15 @@ const Faq = () => {
                   <FaqItem key={faq.id} item={faq} index={index} />
                 ))}
               </div>
+
+              <div className="relative flex-1 lg:pt-24">
+                {faqs.slice(halfLength).map((faq, index) => (
+                  <FaqItem key={faq.id} item={faq} index={halfLength + index} />
+                ))}
+              </div>
             </div>
+
+            <div className="faq-line_after absolute left-[calc(50%-1px)] top-0 -z-1 h-full w-0.5 bg-s2 max-lg:hidden" />
           </div>
         </div>
       </Element>
