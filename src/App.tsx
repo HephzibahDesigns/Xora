@@ -1,3 +1,4 @@
+import Download from "./Sections/Download";
 import Faq from "./Sections/Faq";
 import Features from "./Sections/Features";
 import Header from "./Sections/Header";
@@ -14,6 +15,7 @@ function App() {
       <Pricing />
       <Faq />
       <Testimonials />
+      <Download />
     </main>
   );
 }
