@@ -439,7 +439,7 @@ export const socials = [
     id: "0",
     title: "x",
     icon: x,
-    url: "#",
+    url: "https://x.com/PaulBolu15",
   },
   {
     id: "1",
@@ -451,7 +451,7 @@ export const socials = [
     id: "2",
     title: "Instagram",
     icon: instagram,
-    url: "#",
+    url: "https://www.instagram.com/boluwatife_paul/",
   },
   {
     id: "3",
