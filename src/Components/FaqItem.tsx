@@ -15,7 +15,7 @@ type FaqProp = {
   index: number;
 };
 
-const FaqItem: React.FC<FaqProp> = ({ key, item, index }) => {
+const FaqItem: React.FC<FaqProp> = ({ item, index }) => {
   const [activeId, setActiveId] = useState<string | null>(null);
 
   const active = activeId === item.id;
