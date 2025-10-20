@@ -1,4 +1,3 @@
-import * as React from "react";
 import {
   detail1,
   detail2,

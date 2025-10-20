@@ -1,21 +1,37 @@
 # .github/labeler.yml
 
-- label: "frontend"
+- label: "components"
   files:
-    - "src/frontend/**"
+    - "Components/**"
 
-- label: "backend"
+- label: "sections"
   files:
-    - "src/backend/**"
+    - "Sections/**"
 
-- label: "docs"
+- label: "constants"
   files:
-    - "**/*.md"
+    - "constants/**"
+
+- label: "assets"
+  files:
+    - "assets/**"
 
 - label: "config"
   files:
     - ".github/**"
+    - "package.json"
+    - "tsconfig.json"
+    - "eslint.config.js"
+    - "postcss.config.js"
+    - "vite.config.js"
+    - "tailwind.config.*"
 
-- label: "tests"
+- label: "styles"
   files:
-    - "tests/**"
+    - "**/*.css"
+
+- label: "app"
+  files:
+    - "App.tsx"
+    - "main.tsx"
+    - "index.tsx"
