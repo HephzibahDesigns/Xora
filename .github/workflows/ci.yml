@@ -1,22 +1,21 @@
-name: CI Checks
+name: CI Checks # this must match the required status check in GitHub settings
+
 on:
   push:
     branches:
-      - "**" # runs on all branches
+      - "**" # all branches
   pull_request:
     branches:
-      - master # runs when PR targets master
+      - main
 
 jobs:
-  lint-build-test:
+  ci:
+    name: CI Checks # 👈 must match
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 18
 
@@ -26,8 +25,5 @@ jobs:
       - name: Run ESLint
         run: npm run lint
 
-      - name: Run Build
-        run: npm run build
-
-      - name: Run Tests (optional)
-        run: npm test || echo "No tests found"
+      - name: Run tests
+        run: npm test
