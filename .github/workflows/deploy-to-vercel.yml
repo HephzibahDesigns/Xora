@@ -30,7 +30,7 @@ jobs:
         uses: amondnet/vercel-action@v25
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }} # Add this in your GitHub repo settings
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }} # Add this in your GitHub repo settings
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }} # Add this in your GitHub repo settings
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           working-directory: ./
-          vercel-args: "--prod" # deploy to production
+          vercel-args: "--prod"
